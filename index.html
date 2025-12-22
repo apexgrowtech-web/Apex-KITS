@@ -3,36 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Kits | Cultivo Urbano de Alta Performance</title>
+    <title>Apex Kits - Cultivo Inteligente</title>
     
-    <link rel="icon" type="image/png" href="Cópia_de_Grey_and_Green_Kerala_Travel_Instagram_Post__1_-removebg-preview.png">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/C%C3%B3pia_de_Grey_and_Green_Kerala_Travel_Instagram_Post__1_-removebg-preview.png">
 
     <style>
         :root {
-            --primary-dark: #0a0a0a; 
-            --secondary-dark: #141414;
-            --apex-green: #4CAF50; 
-            --accent-green: #81c784;
-            --text-light: #f5f5f5;
-            --text-gray: #b0b0b0;
+            --primary-dark: #1a1a1a; 
+            --secondary-dark: #2d2d2d;
+            --green-apex: #74c69d; 
+            --text-light: #ffffff;
         }
 
         body {
             margin: 0;
-            font-family: 'Inter', 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             background: var(--primary-dark);
             color: var(--text-light);
-            scroll-behavior: smooth;
-            line-height: 1.6;
         }
 
         header {
-            background: rgba(10, 10, 10, 0.98);
-            padding: 10px 5%;
+            background: rgba(26, 26, 26, 0.9);
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -42,30 +38,21 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--apex-green);
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
-        .logo-area img { height: 35px; }
-
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 0.9rem;
-            transition: 0.3s;
+        .logo-area img {
+            height: 40px;
         }
 
-        nav a:hover { color: var(--apex-green); }
-
-        /* BANNER PRINCIPAL - Ajuste de fonte e fundo */
+        /* BANNER PRINCIPAL COM SUA IMAGEM DE FUNDO */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                        url('ChatGPT Image 21 de dez. de 2025, 15_33_59.jpg');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/ChatGPT%20Image%2021%20de%20dez.%20de%202025%2C%2015_33_59.png');
             background-size: cover;
             background-position: center;
-            height: 70vh; /* Altura reduzida para melhor visualização */
+            height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -74,87 +61,51 @@
             padding: 0 20px;
         }
 
-        .hero h1 { 
-            font-size: 2.5rem; /* Fonte reduzida conforme pedido */
-            margin-bottom: 15px; 
-            max-width: 800px; 
-            letter-spacing: -1px;
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: #ccc; max-width: 700px; }
+
+        .btn-telegram {
+            background: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
         }
 
-        .hero p { 
-            font-size: 1.1rem; 
-            color: var(--text-gray); 
-            max-width: 650px; 
+        .btn-telegram:hover { background: #218838; }
+
+        .error-box {
+            background: #2d2d2d;
+            border-left: 5px solid #74c69d;
+            padding: 40px;
+            margin: 50px auto;
+            max-width: 900px;
+            border-radius: 8px;
         }
 
-        /* SEÇÃO DE KITS PRINCIPAIS */
-        .kits-section { padding: 80px 5%; background: var(--secondary-dark); }
-        .kits-grid {
+        .kits-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: auto;
+            gap: 20px;
+            padding: 50px 5%;
         }
 
         .kit-card {
-            background: var(--primary-dark);
-            padding: 35px;
-            border-radius: 12px;
-            border: 1px solid #222;
+            background: #333;
+            padding: 30px;
+            border-radius: 10px;
             text-align: center;
-            transition: 0.3s;
+            border: 1px solid #444;
         }
-
-        .kit-card:hover { border-color: var(--apex-green); transform: translateY(-5px); }
-        .kit-card h3 { color: var(--accent-green); margin-bottom: 15px; font-size: 1.5rem; }
-
-        /* SEÇÃO SOBRE / ENGENHARIA */
-        .section-padding { padding: 80px 5%; }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .about-text h2 { color: var(--apex-green); font-size: 2.2rem; margin-bottom: 20px; }
-        .about-text p { color: var(--text-gray); font-size: 1.05rem; margin-bottom: 20px; }
-
-        .about-image img {
-            width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 1px solid #333;
-        }
-
-        .btn-cta {
-            background: var(--apex-green);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .btn-cta:hover { background: #388e3c; }
 
         footer {
             text-align: center;
             padding: 40px;
-            border-top: 1px solid #222;
-            color: #555;
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; text-align: center; }
-            .hero h1 { font-size: 2rem; }
+            border-top: 1px solid #333;
+            color: #777;
         }
     </style>
 </head>
@@ -162,29 +113,43 @@
 
 <header>
     <div class="logo-area">
-        <img src="Cópia_de_Grey_and_Green_Kerala_Travel_Instagram_Post__1_-removebg-preview.png" alt="Apex Logo">
-        Apex Kits
+        <img src="https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/C%C3%B3pia_de_Grey_and_Green_Kerala_Travel_Instagram_Post__1_-removebg-preview.png" alt="Apex Logo">
+        Apex Grow Tech
     </div>
     <nav>
-        <a href="#inicio">Início</a>
-        <a href="#kits">Kits</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
+        <a href="#" style="color: white; text-decoration: none;">Início</a>
     </nav>
 </header>
 
-<section id="inicio" class="hero">
-    <h1>Florações Potentes, Zero Discrição Comprometida.</h1>
-    <p>Especialistas em setups para apartamentos. Alcance o potencial máximo do seu plantio com sistemas de filtragem de odor e nutrição de precisão.</p>
-    <a href="#kits" class="btn-cta">Ver Kits Profissionais</a>
-</section>
+<div class="hero">
+    <h1>Domine seu Jardim Secreto</h1>
+    <p>Tecnologia avançada para o cultivo de Cannabis, Tomates e Pimentas premium.</p>
+    <a href="SEU_LINK_TELEGRAM" class="btn-telegram">Acessar Canal Privado</a>
+</div>
 
-<section id="kits" class="kits-section">
-    <div class="kits-grid">
-        <div class="kit-card">
-            <h3>Kit Iniciante Urbano</h3>
-            <p>Foco total em discrição. Inclui sistema de filtragem de carvão ativo para eliminar odores em ambientes fechados.</p>
-        </div>
-        <div class="kit-card">
-            <h3>Kit Pro Floração</h3>
-            <p>Desenvolvido através de nossos experimentos para
+<div class="error-box">
+    <h2 style="color: #74c69d;">Evite os erros de iniciantes!</h2>
+    <p>Muitos perdem tempo e dinheiro com equipamentos errados. Nosso tempo de preparo resultou em um conteúdo prático para minimizar seus erros com materiais exclusivos via Telegram.</p>
+</div>
+
+<div class="kits-container">
+    <div class="kit-card">
+        <h3>Kit Iniciante</h3>
+        <p>Tudo que você precisa para começar seu primeiro cultivo com segurança.</p>
+    </div>
+    <div class="kit-card">
+        <h3>Kit Avançado</h3>
+        <p>Sistemas automatizados para máxima produtividade e controle de clima.</p>
+    </div>
+    <div class="kit-card">
+        <h3>Consultoria VIP</h3>
+        <p>Acompanhamento direto para garantir a melhor colheita da sua vida.</p>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Apex Grow Tech - Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
