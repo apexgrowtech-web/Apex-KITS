@@ -1,155 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Kits - Cultivo Inteligente</title>
-    
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/C%C3%B3pia_de_Grey_and_Green_Kerala_Travel_Instagram_Post__1_-removebg-preview.png">
+<section id="kits" style="padding: 60px 5%; background: #1a1a1a;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: auto;">
+        
+        <div style="background: #2d2d2d; padding: 30px; border-radius: 12px; border: 1px solid #444; text-align: center;">
+            <h3 style="color: #74c69d; font-size: 1.5rem; margin-bottom: 15px;">Kit Iniciante Urbano</h3>
+            <p style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">
+                A solução definitiva para apartamentos. Estufa compacta com <strong>sistema de filtragem de carvão ativo</strong> para eliminar 99% do odor e garantir discrição total.
+            </p>
+        </div>
 
-    <style>
-        :root {
-            --primary-dark: #1a1a1a; 
-            --secondary-dark: #2d2d2d;
-            --green-apex: #74c69d; 
-            --text-light: #ffffff;
-        }
+        <div style="background: #2d2d2d; padding: 30px; border-radius: 12px; border: 1px solid #444; text-align: center;">
+            <h3 style="color: #74c69d; font-size: 1.5rem; margin-bottom: 15px;">Kit Pro Floração</h3>
+            <p style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">
+                Máxima performance em pouco espaço. Setup otimizado com nossa <strong>engenharia de luz e nutrientes</strong> para triplicar o rendimento da sua flora.
+            </p>
+        </div>
 
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: var(--primary-dark);
-            color: var(--text-light);
-        }
+        <div style="background: #2d2d2d; padding: 30px; border-radius: 12px; border: 1px solid #444; text-align: center;">
+            <h3 style="color: #74c69d; font-size: 1.5rem; margin-bottom: 15px;">Consultoria Apex VIP</h3>
+            <p style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">
+                Acesso direto à nossa experiência. Suporte personalizado e acompanhamento via <strong>Bot exclusivo no Telegram</strong> para garantir o sucesso do seu ciclo.
+            </p>
+        </div>
 
-        header {
-            background: rgba(26, 26, 26, 0.9);
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .logo-area img {
-            height: 40px;
-        }
-
-        /* BANNER PRINCIPAL COM SUA IMAGEM DE FUNDO */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/ChatGPT%20Image%2021%20de%20dez.%20de%202025%2C%2015_33_59.png');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; color: #ccc; max-width: 700px; }
-
-        .btn-telegram {
-            background: #28a745;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-
-        .btn-telegram:hover { background: #218838; }
-
-        .error-box {
-            background: #2d2d2d;
-            border-left: 5px solid #74c69d;
-            padding: 40px;
-            margin: 50px auto;
-            max-width: 900px;
-            border-radius: 8px;
-        }
-
-        .kits-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 50px 5%;
-        }
-
-        .kit-card {
-            background: #333;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            border: 1px solid #444;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            border-top: 1px solid #333;
-            color: #777;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="logo-area">
-        <img src="https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/C%C3%B3pia_de_Grey_and_Green_Kerala_Travel_Instagram_Post__1_-removebg-preview.png" alt="Apex Logo">
-        Apex Grow Tech
     </div>
-    <nav>
-        <a href="#" style="color: white; text-decoration: none;">Início</a>
-    </nav>
-</header>
-
-<div class="hero">
-    <h1>Domine seu Jardim Secreto</h1>
-    <p>Tecnologia avançada para o cultivo de Cannabis, Tomates e Pimentas premium.</p>
-    <a href="SEU_LINK_TELEGRAM" class="btn-telegram">Acessar Canal Privado</a>
-</div>
-
-<div class="error-box">
-    <h2 style="color: #74c69d;">Evite os erros de iniciantes!</h2>
-    <p>Muitos perdem tempo e dinheiro com equipamentos errados. Nosso tempo de preparo resultou em um conteúdo prático para minimizar seus erros com materiais exclusivos via Telegram.</p>
-</div>
-
-<div class="kits-container">
-    <div class="kit-card">
-        <h3>Kit Iniciante</h3>
-        <p>Tudo que você precisa para começar seu primeiro cultivo com segurança.</p>
-    </div>
-    <div class="kit-card">
-        <h3>Kit Avançado</h3>
-        <p>Sistemas automatizados para máxima produtividade e controle de clima.</p>
-    </div>
-    <div class="kit-card">
-        <h3>Consultoria VIP</h3>
-        <p>Acompanhamento direto para garantir a melhor colheita da sua vida.</p>
-    </div>
-</div>
-
-<footer>
-    &copy; 2025 Apex Grow Tech - Todos os direitos reservados.
-</footer>
-
-</body>
-</html>
+</section>
