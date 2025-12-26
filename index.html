@@ -15,16 +15,19 @@
             --text-light: #ffffff;
         }
 
+        /* Rolagem suave quando clicar no menu */
+        html { scroll-behavior: smooth; }
+
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
             background: var(--primary-dark);
             color: var(--text-light);
-            overflow-x: hidden;
+            line-height: 1.6;
         }
 
         header {
-            background: rgba(26, 26, 26, 0.9);
+            background: rgba(26, 26, 26, 0.95);
             padding: 15px 5%;
             display: flex;
             justify-content: space-between;
@@ -45,12 +48,31 @@
 
         .logo-area img { height: 40px; }
 
+        /* Menu Superior Direito */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover { color: var(--green-apex); }
+
         .hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                         url('https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/ChatGPT%20Image%2021%20de%20dez.%20de%202025%2C%2015_33_59.png');
             background-size: cover;
             background-position: center;
-            height: 70vh;
+            height: 65vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -59,8 +81,8 @@
             padding: 0 20px;
         }
 
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; max-width: 900px; }
-        .hero p { font-size: 1.1rem; color: #ccc; max-width: 700px; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; max-width: 900px; }
+        .hero p { font-size: 1.1rem; color: #ccc; max-width: 700px; margin-bottom: 25px; }
 
         .btn-telegram {
             background: #28a745;
@@ -69,20 +91,18 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 20px;
             transition: 0.3s;
             display: inline-block;
         }
 
         .btn-telegram:hover { background: #218838; transform: scale(1.05); }
 
-        /* SEÇÃO COMPACTA DO PRODUTO */
-        .product-brief {
+        .product-section {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 40px;
-            padding: 60px 10%;
+            gap: 50px;
+            padding: 80px 10%;
             background: var(--secondary-dark);
             flex-wrap: wrap;
         }
@@ -90,52 +110,52 @@
         .product-img {
             max-width: 350px;
             width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 1px solid #444;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.6);
         }
 
-        .product-info { max-width: 500px; }
-        .product-info h2 { color: var(--green-apex); margin-top: 0; }
-
-        .error-box {
-            background: #2d2d2d;
-            border-left: 5px solid #74c69d;
-            padding: 40px;
-            margin: 40px auto;
-            max-width: 900px;
-            border-radius: 8px;
-        }
+        .product-text { max-width: 500px; }
+        .product-text h2 { color: var(--green-apex); font-size: 2.2rem; margin-top: 0; }
 
         .kits-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 40px 5% 80px 5%;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: auto;
         }
 
         .kit-card {
-            background: #333;
+            background: #252525;
             padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            border: 1px solid #444;
+            border-radius: 12px;
+            border: 1px solid #333;
             transition: 0.3s;
         }
+
         .kit-card:hover { border-color: var(--green-apex); }
-        .kit-card h3 { color: var(--green-apex); margin-bottom: 15px; }
+        .kit-card h3 { color: var(--green-apex); margin-top: 0; }
+        .kit-card .price { font-size: 1.6rem; font-weight: bold; margin: 15px 0; }
+
+        .cta-bottom {
+            text-align: center;
+            padding: 100px 20px;
+            background: #111;
+        }
 
         footer {
             text-align: center;
             padding: 40px;
-            border-top: 1px solid #333;
-            color: #777;
-            font-size: 0.9rem;
+            color: #555;
+            font-size: 0.85rem;
+            border-top: 1px solid #222;
         }
 
         @media (max-width: 768px) {
-            .product-brief { text-align: center; padding: 40px 5%; }
+            nav ul { display: none; } /* Esconde o menu no mobile para simplificar */
             .hero h1 { font-size: 2rem; }
+            .product-section { text-align: center; }
         }
     </style>
 </head>
@@ -147,49 +167,37 @@
         Apex Grow Tech
     </div>
     <nav>
-        <a href="https://t.me/apexgrowtech_bot" style="color: white; text-decoration: none; font-weight: bold;">Contato</a>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="https://t.me/apexgrowtech_bot">Contato</a></li>
+        </ul>
     </nav>
 </header>
 
-<div class="hero">
+<section class="hero" id="inicio">
     <h1>Engenharia de Cultivo para Pequenos Espaços.</h1>
     <p>Tecnologia avançada de filtragem de odor e floração máxima para apartamentos.</p>
-    <a href="https://t.me/apexgrowtech_bot" class="btn-telegram">🚀 Iniciar no Bot Telegram</a>
-</div>
+    <a href="https://t.me/apexgrowtech_bot" class="btn-telegram">🛒 Iniciar no Bot Telegram</a>
+</section>
 
-<div class="product-brief">
-    <img src="https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/C%C3%B3pia%20de%20Grey%20and%20Green%20Kerala%20Travel%20Instagram%20Post%20(2).png" alt="Setup Apex" class="product-img">
-    <div class="product-info">
-        <h2>Pronto para Colher?</h2>
-        <p>Nossos sistemas são modulares e discretos. Através do nosso bot, você seleciona o kit ideal e recebe todo o suporte de instalação e nutrição automaticamente.</p>
-        <a href="https://t.me/apexgrowtech_bot" class="btn-telegram" style="background: transparent; border: 1px solid var(--green-apex); color: var(--green-apex);">Ver Detalhes do Setup</a>
+<section class="product-section" id="sobre">
+    <img src="https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/C%C3%B3pia%20de%20Grey%20and%20Green%20Kerala%20Travel%20Instagram%20Post%20(3).png" alt="Setup Apex" class="product-img">
+    <div class="product-text">
+        <h2>Domine seu Jardim</h2>
+        <p>A <strong>Apex Kits</strong> nasceu da necessidade de transformar espaços pequenos em jardins de alta performance. Nossos setups utilizam engenharia de precisão para garantir colheitas premium com 100% de discrição.</p>
+        <p>Utilizamos apenas o que há de melhor no mercado: LEDs Samsung e sistemas de exaustão silenciosos com filtragem industrial.</p>
     </div>
-</div>
+</section>
 
-<div class="error-box">
-    <h2 style="color: #74c69d;">Domine seu Jardim Secreto</h2>
-    <p>Evite equipamentos errados. Nosso bot gerencia seu pedido e libera acesso imediato ao conteúdo prático para garantir sua primeira colheita premium.</p>
-</div>
-
-<div class="kits-container">
+<section class="kits-container" id="produtos">
     <div class="kit-card">
-        <h3>Kit Iniciante Urbano</h3>
-        <p>Estufa compacta com <strong>filtragem de carbono</strong>. O silêncio e o sigilo que seu apartamento precisa.</p>
+        <h3>📦 APEX Micro (50x50)</h3>
+        <p>O mestre do sigilo. Perfeito para armários, focado em discrição absoluta.</p>
+        <div class="price">R$ 2.490</div>
+        <a href="https://t.me/apexgrowtech_bot" class="btn-telegram" style="width: 80%; text-align: center;">Assinar no Bot</a>
     </div>
-    <div class="kit-card">
-        <h3>Kit Pro Floração</h3>
-        <p>Engenharia de luz otimizada para <strong>triplicar o rendimento</strong> em espaços de até 60x60cm.</p>
-    </div>
-    <div class="kit-card">
-        <h3>Consultoria VIP</h3>
-        <p>Acompanhamento 1-a-1 e métricas de nutrição via <strong>Bot exclusivo</strong> com alertas diários.</p>
-    </div>
-</div>
 
-<footer>
-    &copy; 2025 Apex Grow Tech - Pagamentos via Mercado Pago & Stripe. <br>
-    Desenvolvido para cultivadores de elite.
-</footer>
-
-</body>
-</html>
+    <div class="kit-card" style="border-color: var(--green-apex); transform: scale(1.05);">
+        <h3>⭐
