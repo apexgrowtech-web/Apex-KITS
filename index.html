@@ -20,6 +20,7 @@
             font-family: 'Segoe UI', sans-serif;
             background: var(--primary-dark);
             color: var(--text-light);
+            overflow-x: hidden;
         }
 
         header {
@@ -42,16 +43,14 @@
             font-size: 1.2rem;
         }
 
-        .logo-area img {
-            height: 40px;
-        }
+        .logo-area img { height: 40px; }
 
         .hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                         url('https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/ChatGPT%20Image%2021%20de%20dez.%20de%202025%2C%2015_33_59.png');
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -60,8 +59,8 @@
             padding: 0 20px;
         }
 
-        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; max-width: 900px; }
-        .hero p { font-size: 1.2rem; color: #ccc; max-width: 700px; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; max-width: 900px; }
+        .hero p { font-size: 1.1rem; color: #ccc; max-width: 700px; }
 
         .btn-telegram {
             background: #28a745;
@@ -72,24 +71,47 @@
             font-weight: bold;
             margin-top: 20px;
             transition: 0.3s;
+            display: inline-block;
         }
 
-        .btn-telegram:hover { background: #218838; }
+        .btn-telegram:hover { background: #218838; transform: scale(1.05); }
+
+        /* SEÇÃO COMPACTA DO PRODUTO */
+        .product-brief {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 60px 10%;
+            background: var(--secondary-dark);
+            flex-wrap: wrap;
+        }
+
+        .product-img {
+            max-width: 350px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #444;
+        }
+
+        .product-info { max-width: 500px; }
+        .product-info h2 { color: var(--green-apex); margin-top: 0; }
 
         .error-box {
             background: #2d2d2d;
             border-left: 5px solid #74c69d;
             padding: 40px;
-            margin: 50px auto;
+            margin: 40px auto;
             max-width: 900px;
             border-radius: 8px;
         }
 
         .kits-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            padding: 50px 5%;
+            padding: 40px 5% 80px 5%;
         }
 
         .kit-card {
@@ -98,8 +120,9 @@
             border-radius: 10px;
             text-align: center;
             border: 1px solid #444;
+            transition: 0.3s;
         }
-
+        .kit-card:hover { border-color: var(--green-apex); }
         .kit-card h3 { color: var(--green-apex); margin-bottom: 15px; }
 
         footer {
@@ -107,6 +130,12 @@
             padding: 40px;
             border-top: 1px solid #333;
             color: #777;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-brief { text-align: center; padding: 40px 5%; }
+            .hero h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -118,38 +147,48 @@
         Apex Grow Tech
     </div>
     <nav>
-        <a href="#" style="color: white; text-decoration: none;">Início</a>
+        <a href="https://t.me/apexgrowtech_bot" style="color: white; text-decoration: none; font-weight: bold;">Contato</a>
     </nav>
 </header>
 
 <div class="hero">
     <h1>Engenharia de Cultivo para Pequenos Espaços.</h1>
-    <p>Colheitas profissionais com floração máxima e tecnologia avançada de filtragem de odor para o seu setup de apartamento.</p>
-    <a href="SEU_LINK_TELEGRAM" class="btn-telegram">Acessar Canal Privado</a>
+    <p>Tecnologia avançada de filtragem de odor e floração máxima para apartamentos.</p>
+    <a href="https://t.me/apexgrowtech_bot" class="btn-telegram">🚀 Iniciar no Bot Telegram</a>
+</div>
+
+<div class="product-brief">
+    <img src="https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/C%C3%B3pia%20de%20Grey%20and%20Green%20Kerala%20Travel%20Instagram%20Post%20(2).png" alt="Setup Apex" class="product-img">
+    <div class="product-info">
+        <h2>Pronto para Colher?</h2>
+        <p>Nossos sistemas são modulares e discretos. Através do nosso bot, você seleciona o kit ideal e recebe todo o suporte de instalação e nutrição automaticamente.</p>
+        <a href="https://t.me/apexgrowtech_bot" class="btn-telegram" style="background: transparent; border: 1px solid var(--green-apex); color: var(--green-apex);">Ver Detalhes do Setup</a>
+    </div>
 </div>
 
 <div class="error-box">
-    <h2 style="color: #74c69d;">Domine seu Jardim Secreto com Tecnologia</h2>
-    <p>Muitos perdem tempo e dinheiro com equipamentos errados. Nosso tempo de preparo resultou em um conteúdo prático para minimizar seus erros com materiais exclusivos via Telegram.</p>
+    <h2 style="color: #74c69d;">Domine seu Jardim Secreto</h2>
+    <p>Evite equipamentos errados. Nosso bot gerencia seu pedido e libera acesso imediato ao conteúdo prático para garantir sua primeira colheita premium.</p>
 </div>
 
 <div class="kits-container">
     <div class="kit-card">
         <h3>Kit Iniciante Urbano</h3>
-        <p>A solução definitiva para apartamentos. Estufa compacta com <strong>sistema de filtragem de carvão ativo</strong> para eliminar 99% do odor e garantir discrição total.</p>
+        <p>Estufa compacta com <strong>filtragem de carbono</strong>. O silêncio e o sigilo que seu apartamento precisa.</p>
     </div>
     <div class="kit-card">
         <h3>Kit Pro Floração</h3>
-        <p>Máxima performance em pouco espaço. Setup otimizado com nossa <strong>engenharia de luz e nutrientes</strong> para triplicar o rendimento da sua flora.</p>
+        <p>Engenharia de luz otimizada para <strong>triplicar o rendimento</strong> em espaços de até 60x60cm.</p>
     </div>
     <div class="kit-card">
-        <h3>Consultoria Apex VIP</h3>
-        <p>Acesso direto à nossa experiência. Suporte personalizado e acompanhamento via <strong>Bot exclusivo no Telegram</strong> para garantir o sucesso do seu ciclo.</p>
+        <h3>Consultoria VIP</h3>
+        <p>Acompanhamento 1-a-1 e métricas de nutrição via <strong>Bot exclusivo</strong> com alertas diários.</p>
     </div>
 </div>
 
 <footer>
-    &copy; 2025 Apex Grow Tech - Todos os direitos reservados.
+    &copy; 2025 Apex Grow Tech - Pagamentos via Mercado Pago & Stripe. <br>
+    Desenvolvido para cultivadores de elite.
 </footer>
 
 </body>
