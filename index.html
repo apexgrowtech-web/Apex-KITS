@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Kits - Cultivo Indoor</title>
+    <title>Apex Kits - Cultivo Indoor Profissional</title>
     
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/C%C3%B3pia_de_Grey_and_Green_Kerala_Travel_Instagram_Post__1_-removebg-preview.png">
 
@@ -64,9 +64,8 @@
 
         nav ul li a:hover { color: var(--green-apex); }
 
-        /* HERO SECTION - FONTES AJUSTADAS */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
                         url('https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/ChatGPT%20Image%2021%20de%20dez.%20de%202025%2C%2015_33_59.png');
             background-size: cover;
             background-position: center;
@@ -80,9 +79,9 @@
         }
 
         .hero h1 { 
-            font-size: 2.2rem; /* Fonte reduzida */
+            font-size: 2.2rem; 
             margin-bottom: 10px; 
-            max-width: 800px; 
+            max-width: 850px; 
         }
 
         .hero p { 
@@ -101,11 +100,12 @@
             font-weight: bold;
             transition: 0.3s;
             display: inline-block;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-telegram:hover { background: #218838; transform: scale(1.05); }
 
-        /* SEÇÃO SOBRE - FUNDO ESCURO SECUNDÁRIO */
         .product-section {
             display: flex;
             align-items: center;
@@ -126,10 +126,32 @@
         .product-text { max-width: 500px; }
         .product-text h2 { color: var(--green-apex); font-size: 2rem; margin-top: 0; }
 
-        /* SEÇÃO PRODUTOS - FUNDO ESCURO PRINCIPAL COM CARDS BRANCOS */
+        .strategy-block {
+            background: #222; 
+            padding: 60px 10%; 
+            text-align: center; 
+            border-left: 4px solid var(--green-apex); 
+            margin: 40px 5%; 
+            border-radius: 0 15px 15px 0;
+        }
+
+        .strategy-block h2 { color: var(--green-apex); font-size: 1.8rem; margin-bottom: 20px; }
+        .strategy-block p { color: #eee; font-size: 1.1rem; max-width: 850px; margin: 0 auto 30px auto; line-height: 1.8; }
+        
+        .strategy-features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            color: var(--green-apex);
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
         .kits-section {
             background: var(--primary-dark);
-            padding: 80px 5%;
+            padding: 60px 5%;
             text-align: center;
         }
 
@@ -144,7 +166,7 @@
         }
 
         .kit-card {
-            background: #ffffff; /* Cards em Branco como solicitado */
+            background: #ffffff;
             padding: 40px 30px;
             border-radius: 15px;
             text-align: left;
@@ -155,7 +177,8 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
-        .kit-card h3 { color: var(--primary-dark); margin: 0 0 15px 0; font-size: 1.4rem; }
+        .kit-card h3 { color: var(--primary-dark); margin: 0 0 5px 0; font-size: 1.4rem; }
+        .kit-card .size-label { color: #27ae60; font-weight: bold; font-size: 0.9rem; margin-bottom: 15px; display: block; }
         
         .specs-list {
             list-style: none;
@@ -175,11 +198,21 @@
 
         .specs-list li::before { content: '✔'; color: #27ae60; font-weight: bold; }
 
-        /* SEÇÃO FINAL */
         .cta-bottom {
             text-align: center;
             padding: 100px 20px;
             background: #111;
+        }
+
+        .vip-badge {
+            display: inline-block;
+            background: rgba(116, 198, 157, 0.1);
+            border: 1px solid var(--green-apex);
+            color: var(--green-apex);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-top: 20px;
         }
 
         footer {
@@ -189,11 +222,9 @@
             font-size: 0.85rem;
         }
 
-        /* RESPONSIVIDADE MOBILE */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8rem; } /* Fonte menor ainda no celular */
-            .hero p { font-size: 1rem; }
-            .product-section { text-align: center; }
+            .hero h1 { font-size: 1.7rem; }
+            .hero p { font-size: 0.95rem; }
             nav ul { display: none; }
         }
     </style>
@@ -209,15 +240,15 @@
         <ul>
             <li><a href="#inicio">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#metodo">O Método</a></li>
             <li><a href="#produtos">Equipamentos</a></li>
-            <li><a href="https://t.me/apexgrowtech_bot">Contato</a></li>
         </ul>
     </nav>
 </header>
 
 <section class="hero" id="inicio">
     <h1>Cultivo Indoor: Alta Performance em Pouco Espaço.</h1>
-    <p>Tenha uma floração potente com tecnologia de filtragem industrial: 100% de rendimento com zero cheiro no ambiente.</p>
+    <p>Tecnologia de filtragem industrial e iluminação de elite: colheitas potentes com zero odor e máxima discrição.</p>
     <a href="https://t.me/apexgrowtech_bot" class="btn-telegram">QUERO MEU SETUP PROFISSIONAL</a>
 </section>
 
@@ -225,58 +256,80 @@
     <img src="https://raw.githubusercontent.com/apexgrowtech-web/Apex-KITS/main/C%C3%B3pia%20de%20Grey%20and%20Green%20Kerala%20Travel%20Instagram%20Post%20(3).png" alt="Setup Apex" class="product-img">
     <div class="product-text">
         <h2>Engenharia de Cultivo Urbano</h2>
-        <p>A <strong>Apex Kits</strong> foi criada para resolver os desafios do cultivador moderno. Nossos setups garantem que você tenha um jardim secreto produtivo, seguro e totalmente discreto dentro do seu apartamento.</p>
+        <p>A <strong>Apex Kits</strong> nasceu para suprir o cultivador que não quer perder tempo com equipamentos improvisados. Entregamos a ciência aplicada para garantir resultados reais desde o primeiro ciclo.</p>
+    </div>
+</section>
+
+<section class="strategy-block" id="metodo">
+    <h2>Pare de Gastar Duas Vezes</h2>
+    <p>
+        Muitos cultivadores iniciam com kits incompletos e materiais inadequados, frustrando-se com colheitas ruins. 
+        O resultado? Gastam o dobro para comprar as peças certas depois. 
+        <br><br>
+        Na <strong>Apex Grow Tech</strong>, eliminamos essa curva de erro. Nossos kits já acompanham o <strong>setup definitivo</strong>. Você começa do jeito certo, com tecnologia que entrega resultados profissionais.
+    </p>
+    <div class="strategy-features">
+        <span>● Sem troca de peças</span>
+        <span>● Zero vazamento de odor</span>
+        <span>● Tecnologia de Ponta</span>
     </div>
 </section>
 
 <section class="kits-section" id="produtos">
-    <h2>Nossos Kits Profissionais</h2>
+    <h2>Nossos Kits Completos</h2>
     <div class="kits-grid">
         
         <div class="kit-card">
             <h3>📦 APEX Micro</h3>
+            <span class="size-label">Medida: 50x50x100cm</span>
             <ul class="specs-list">
-                <li>Ideal para espaços reduzidos</li>
-                <li>LED Samsung de alta eficiência</li>
+                <li>Ideal para armários e cantos discretos</li>
+                <li>LED Samsung Quantum Board</li>
                 <li>Filtro de carvão industrial (Zero Cheiro)</li>
-                <li>Exaustão silenciosa premium</li>
+                <li>Exaustão ultra silenciosa</li>
             </ul>
-            <a href="https://t.me/apexgrowtech_bot" class="btn-telegram" style="text-align: center;">Ver no Telegram</a>
+            <a href="https://t.me/apexgrowtech_bot" class="btn-telegram" style="text-align: center; font-size: 0.9rem;">Ver no Telegram</a>
         </div>
 
         <div class="kit-card">
             <h3>⭐ APEX Core</h3>
+            <span class="size-label">Medida: 60x60x140cm</span>
             <ul class="specs-list">
-                <li>O melhor custo-benefício</li>
-                <li>Painel Quantum Board Dimmable</li>
-                <li>Estrutura Mylar 600D reforçada</li>
+                <li>O melhor custo-benefício do mercado</li>
+                <li>Painel LED Dimmable de alta eficiência</li>
+                <li>Estrutura em Mylar 600D reforçada</li>
                 <li>Kit nutrição completo incluso</li>
             </ul>
-            <a href="https://t.me/apexgrowtech_bot" class="btn-telegram" style="text-align: center;">Ver no Telegram</a>
+            <a href="https://t.me/apexgrowtech_bot" class="btn-telegram" style="text-align: center; font-size: 0.9rem;">Ver no Telegram</a>
         </div>
 
         <div class="kit-card">
             <h3>🚀 APEX Master</h3>
+            <span class="size-label">Medida: 120x60x150cm</span>
             <ul class="specs-list">
-                <li>Máxima produção por colheita</li>
-                <li>Cobertura de luz ampliada</li>
-                <li>Sistema de exaustão de alta vazão</li>
-                <li>Automação de tempo e clima</li>
+                <li>Máxima produção e rendimento</li>
+                <li>Sistema de iluminação de espectro total</li>
+                <li>Exaustão reforçada de alta vazão</li>
+                <li>Controle automático de clima e tempo</li>
             </ul>
-            <a href="https://t.me/apexgrowtech_bot" class="btn-telegram" style="text-align: center;">Ver no Telegram</a>
+            <a href="https://t.me/apexgrowtech_bot" class="btn-telegram" style="text-align: center; font-size: 0.9rem;">Ver no Telegram</a>
         </div>
 
     </div>
 </section>
 
-<section class="cta-bottom" id="contato">
-    <h2>Pronto para começar?</h2>
-    <p>Acesse nosso bot e configure o kit ideal para o seu espaço.</p>
-    <a href="https://t.me/apexgrowtech_bot" class="btn-telegram" style="background: #0088cc;">📱 CHAMAR NO TELEGRAM</a>
+<section class="cta-bottom">
+    <h2>Pronto para sua melhor colheita?</h2>
+    <p>Fale com nosso assistente no Telegram para configurar seu kit.</p>
+    <a href="https://t.me/apexgrowtech_bot" class="btn-telegram" style="background: #0088cc;">📱 ACESSAR BOT NO TELEGRAM</a>
+    <br>
+    <div class="vip-badge">
+        🔒 <strong>BÔNUS EXCLUSIVO:</strong> Após a compra, você recebe acesso imediato ao nosso <strong>Canal Privado de Dicas de Cultivo</strong>.
+    </div>
 </section>
 
 <footer>
-    &copy; 2025 Apex Grow Tech - Todos os direitos reservados.
+    &copy; 2025 Apex Grow Tech - Engenharia em Cultivo Indoor.
 </footer>
 
 </body>
